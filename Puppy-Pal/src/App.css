@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+.puppy-name:hover {
+  /* justify-content: center;
+  align-items: center; */
+  cursor: pointer;
+}
+.puppy-name ul li {
+  list-style-type: none;
+}
+.puppy-name.selected {
+  font-weight: bold;
+}
+.dog-info {
+  background-color: green;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  top: 30px;
+  left: 40%;
+}
