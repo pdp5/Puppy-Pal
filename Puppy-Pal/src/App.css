@@ -1,14 +1,29 @@
 body {
   display: flex;
   justify-content: center;
+  /* background-color: aqua; */
 }
-.puppy-name:hover {
-  /* justify-content: center;
-  align-items: center; */
-  cursor: pointer;
+hr {
+  width: 100vw;
+  margin-top: 30px;
+}
+.puppy-name {
+  display: flex;
+  justify-content: center;
+  border: solid 2px black;
+  border-radius: 10px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .puppy-name ul li {
   list-style-type: none;
+  font-size: larger;
+  text-align: center;
+}
+.puppy-name ul li:hover {
+  font-weight: bold;
+  cursor: pointer;
 }
 .puppy-name.selected {
   font-weight: bold;
@@ -17,7 +32,24 @@ body {
   background-color: green;
   padding: 10px;
   border-radius: 5px;
-  width: 100%;
-  top: 30px;
-  left: 40%;
+  width: 50%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+.dog-info h2 {
+  text-decoration: underline;
+}
+.dog-info h2,
+.dog-info p {
+  text-align: center;
+}
+.dog-info p li,
+.dog-info p {
+  list-style-type: none;
+  font-size: larger;
+}
+h1 {
+  text-align: center;
 }

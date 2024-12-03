@@ -1,4 +1,3 @@
-import Puppy from "./Puppy";
 import "./App.css";
 import { useState } from "react";
 import { puppyList } from "./data";
@@ -26,18 +25,18 @@ function App() {
           <p>
             <strong>Age:</strong> {selectDog.age}
           </p>
-          <p>
+          {/* <p>
             <strong>Owner ID: </strong> {selectDog.ownerId}
-          </p>
+          </p> */}
           {selectDog.tricks.length > 0 && (
             <p>
               <strong>Tricks: </strong>{" "}
               {selectDog.tricks.map((trick) => (
                 <ul key={trick.id}>
-                  <li>
+                  {/* <li>
                     <strong>ID: </strong>
                     {trick.id}
-                  </li>
+                  </li> */}
                   <li>
                     <strong>Title: </strong>
                     {trick.title}
@@ -48,14 +47,17 @@ function App() {
           )}
         </div>
       )}
+      <hr />
       <h1 className="headiing">Dog List</h1>
       {puppyList.map((dog, index) => (
-        <Puppy
+        <div
           key={index}
-          name={dog.name}
-          onClick={() => handleClick(dog)}
-          selected={selectDog?.id === dog.id}
-        />
+          className={`puppy-name ${selectDog?.id === dog.id ? "selected" : ""}`}
+        >
+          <ul>
+            <li onClick={() => handleClick(dog)}>{dog.name}</li>
+          </ul>
+        </div>
       ))}
     </>
   );
